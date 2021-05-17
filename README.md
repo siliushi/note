@@ -17,3 +17,23 @@ querySelector只能获取元素某一时刻的元素，不能获取动态元素
    
 3、document.documentElement  ===  HTML   
 在ie7及ie7以下的html元素坐标会从(2, 2)开始算起    
+
+
+#### 页面布局代码
+```
+<div class="g-app-wrapper">
+    <div class="g-sidebar"></div>
+    <div class="g-main"></div>
+</div>
+.g-app-wrapper {
+    display: flex;
+    min-width: 1200px;
+}
+.g-sidebar {
+    flex-basis: 250px;
+    margin-right: 10px;
+}
+.g-main {
+    flex-grow: 1;
+}
+```
