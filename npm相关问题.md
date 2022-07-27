@@ -314,6 +314,14 @@ x的位置表示任意版本
 满足range1或者满足range2，可以多个范围
 如：<1.0.0 || >=2.3.1 <2.4.5 || >=2.5.2 < 3.0.0，表示满足这3个范围的版本都可以
 
+## overrides
+npm8的配置，主要解决特定的一个依赖npm有问题，但是因为依赖关系的问题造成很难处理，使用overrides我们就可以重写依赖的特定版本了
+```
+"overrides": {
+  "esbuild":"npm:esbuild-wasm@latest"
+}
+```
+官方文档：[https://docs.npmjs.com/cli/v8/configuring-npm/package-json/#overrides](https://docs.npmjs.com/cli/v8/configuring-npm/package-json/#overrides)
 ## dependencies、devDependencies、peerDependencies
 ### dependencies
 首先dependencies是大家最常用的，比如项目依赖了vue，那么vue就是dependencies，这里的依赖是会被最终构建到部署环境的。
@@ -600,21 +608,6 @@ npm unpublish 命令只能删除 72小时以内 发布的包
 npm unpublish 删除的包，在 24小时内 不允许重复发布
 https://docs.npmjs.com/policies/unpublish/
 
-
-
-# yarn
-特点
-pnp
-
-# learn
-特点
-
-# pnpm
-8.1 特点
-8.2 monorepo
-
-# nx
-https://dev.to/nx/nx-the-fastest-growing-monorepo-solution-in-the-js-ecosystem-5en9
 
 
 
